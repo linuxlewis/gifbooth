@@ -1,2 +1,3 @@
-moviepy==0.2.2.11
 TwitterAPI==2.3.3
+picamera
+rpio
