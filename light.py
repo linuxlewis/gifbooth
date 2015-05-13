@@ -9,7 +9,7 @@ class LightManager:
         self.lights = []
 
         for pin in pins:
-            self.lights.append(Light(pin))
+            self.add_light(pin)
 
     def add_light(self, pin_number):
         self.lights.append(Light(pin_number))
