@@ -38,3 +38,4 @@ class Video:
                                  "-y", "/tmp/output.gif"])
         # clean up
         os.system("rm /tmp/video.h264")
+        return '/tmp/output.gif'
