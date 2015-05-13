@@ -17,9 +17,9 @@ class LightManager:
     def flash(self, seconds=3):
         stop_at = time.time() + seconds
         while time.time() < stop_at:
-            map(lambda x: x.turn_light_on(), self.lights)
+            list(map(lambda x: x.turn_light_on(), self.lights))
             sleep(0.2)
-            map(lambda x: x.turn_light_off(), self.lights)
+            list(map(lambda x: x.turn_light_off(), self.lights))
             sleep(0.2)
         map(lambda x: x.turn_light_off(), self.lights)
 
