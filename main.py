@@ -16,7 +16,7 @@ def main():
     light_manager = light.LightManager(pins=OUTPUT_PINS)
 
     # map the creating a gif
-    def light_show():
+    def light_show(channel):
         light_manager.final_countdown()
         vid.make_gif()
         light_manager.flash()
