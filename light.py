@@ -31,7 +31,6 @@ class LightManager:
             light.turn_light_on()
             sleep(1)
             light.turn_light_off()
-        self.flash()
 
 
 class Light:
