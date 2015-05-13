@@ -7,7 +7,7 @@ class Video:
 
     def __init__(self):
         # setup the camera and start the preview
-        self.camera = picamera.PiCamera(resolution=(1280, 720))
+        self.camera = picamera.PiCamera(resolution=(800, 480))
         self.camera.start_preview()
         self.current_overlay = 0
 
