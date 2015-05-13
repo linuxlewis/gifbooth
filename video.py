@@ -31,10 +31,10 @@ class Video:
 
     def make_gif(self):
         self.camera.start_preview()
-        self.camera.start_recording('video.h264')
+        self.camera.start_recording('/tmp/video.h264')
         self.camera.wait_recording(3)
         # create the gif
-        subprocess.check_output(["ffmpeg", "-i", "video.h264", "-vf", "scale=720:-1", "-t", "10", "-r", "10",
-                                 "output.gif"])
+        subprocess.check_output(["ffmpeg", "-i", "/tmp/video.h264", "-vf", "scale=720:-1", "-t", "10", "-r", "10",
+                                 "-y", "/tmp/output.gif"])
         # clean up
-        os.system("rm ~/video.h264")
+        os.system("rm /tmp/video.h264")
